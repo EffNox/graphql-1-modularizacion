@@ -1,0 +1,7 @@
+
+enum Nivel {
+	TODOS
+	NOVATOS
+	INTERMEDIO
+	EXPERTO
+}

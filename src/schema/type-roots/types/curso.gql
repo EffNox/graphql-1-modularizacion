@@ -1,0 +1,13 @@
+type Curso {
+	id: ID!
+	title: String!
+	description: String!
+	clases: Int!
+	time: Float!
+	logo: String!
+	level: Nivel!
+	path: String!
+	teacher: String!
+	students: [Estudiante]
+	reviews: [Valoracion!]!
+}

@@ -1,0 +1,6 @@
+type Valoracion {
+	id: ID!
+	name: String!
+	points: Float!
+	comment: String
+}

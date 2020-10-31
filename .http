@@ -1,0 +1,67 @@
+@url = http://localhost:5300
+
+GET {{url}}
+
+###
+GET {{url}}/graphql?query={courses{id,clases}}
+
+###
+POST {{url}}/graphql
+Content-Type: application/json
+X-REQUEST-TYPE: GraphQL
+
+query ($id: ID!){
+    estudiante(id:$id) {
+        id
+        name
+        email
+        website
+    } 
+    # courses {
+    #     id
+    #     clases
+    # }
+}
+
+{
+    "id": "3"
+}
+
+
+###
+# Content-Type: application/json
+# # Authorization: Bearer xxx
+# X-REQUEST-TYPE: GraphQL
+
+# query ($name: String!, $owner: String!) {
+#   repository(name: $name, owner: $owner) {
+#     name
+#     fullName: nameWithOwner
+#     description
+#     diskUsage
+#     forkCount
+#     stargazers(first: 5) {
+#         totalCount
+#         nodes {
+#             login
+#             name
+#         }
+#     }
+#     watchers {
+#         totalCount
+#     }
+#   }
+# }
+
+# {
+#     "name": "vscode-restclient",
+#     "owner": "Huachao"
+# }
+
+
+# POST {{url}}/graphql
+# Content-Type: application/json
+# 
+# {
+#    "query": "{ courses {   id    clases  } }"
+# }

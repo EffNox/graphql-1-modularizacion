@@ -1,0 +1,5 @@
+type Mutation {
+	cursoNuevo(curso: CursoInput!): Curso!
+	cursoModificar(curso: CursoInput!): Curso!
+	cursoEliminar(id: ID!): Curso!
+}
